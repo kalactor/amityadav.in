@@ -1,85 +1,667 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme-mode="system">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Kumar</title>
+    <title>Amit Yadav - Android & IoT Developer</title>
+    <meta name="description" content="Android & IoT Developer from Rajasthan, India. I build clean Android apps and connected devices that solve real problems.">
+    <meta name="keywords" content="Android Developer, IoT Developer, Kotlin, ESP32, Arduino, Next.js, React">
+    <meta name="author" content="Amit Yadav">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amityadav.in/">
+    <meta property="og:title" content="Amit Yadav - Android & IoT Developer">
+    <meta property="og:description" content="I build clean Android apps and connected devices that solve real world problems">
+    <meta property="og:site_name" content="Amit Yadav">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://amityadav.in/images/amit.jpg">
+    <meta property="og:image:alt" content="Portrait of Amit Yadav">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://amityadav.in/">
+    <meta property="twitter:title" content="Amit Yadav - Android & IoT Developer">
+    <meta property="twitter:description" content="I build clean Android apps and connected devices that solve real problems">
+    <meta property="twitter:creator" content="@amitacoder">
+    <meta property="twitter:image" content="https://amityadav.in/images/amit.jpg">
+    <meta property="twitter:image:alt" content="Portrait of Amit Yadav">
+
     <link rel="stylesheet" href="style.css">
-    <!----Font awesome cdn  font icon css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <!-- favicon -->
-    <link rel="icon" type="image/png" href="images/favicon-32x32.png">
+    <script src="app.js"></script>   
+    <link rel="canonical" href="https://amityadav.in/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "WebSite",
+                    "@id": "https://amityadav.in/#website",
+                    "url": "https://amityadav.in/",
+                    "name": "Amit Yadav",
+                    "description": "Android & IoT Developer from Rajasthan, India. I build clean Android apps and connected devices that solve real problems.",
+                    "publisher": {
+                        "@id": "https://amityadav.in/#person"
+                    }
+                },
+                {
+                    "@type": "Person",
+                    "@id": "https://amityadav.in/#person",
+                    "name": "Amit Yadav",
+                    "url": "https://amityadav.in/",
+                    "image": "https://amityadav.in/images/amit.jpg",
+                    "jobTitle": "Android & IoT Developer",
+                    "email": "mailto:amity1401@gmail.com",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressRegion": "Rajasthan",
+                        "addressCountry": "IN"
+                    },
+                    "sameAs": [
+                        "https://github.com/kalactor",
+                        "https://linkedin.com/in/rootamit",
+                        "https://twitter.com/amitacoder",
+                        "https://play.google.com/store/apps/developer?id=Amit+Kumar+Rabarka"
+                    ]
+                }
+            ]
+        }
+    </script>
 </head>
 <body>
-     <div class="hero-header">
-        <div class="wrapper">
-            <header>
-                <div class="logo">
-                    <a href="https://amityadav.in"><i class="fa-solid fa-a"></i></a>
-                    <div class="logo-text">mit Kumar</div>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="#hero" class="brand-link">Amit Yadav</a>
                 </div>
-                <nav>
-                    <div class="togglebtn">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <ul class="navlinks">
-                        <li><a href="https://amityadav.in">Home</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="#">Resume</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </header>
+                
+                <div class="nav-menu" id="nav-menu">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#experience" class="nav-link">Experience</a>
+                    <a href="#blog" class="nav-link">Blog</a>
+                    <a href="#contact" class="nav-link">Contact</a>
+                </div>
+                
+                <div class="nav-controls">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Change theme">
+                        <span class="theme-toggle-icon" id="theme-icon">
+                            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="5"/>
+                                <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                            </svg>
+                            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                            </svg>
+                            <svg class="system-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                                <line x1="8" y1="21" x2="16" y2="21"/>
+                                <line x1="12" y1="17" x2="12" y2="21"/>
+                            </svg>
+                        </span>
+                    </button>
+                    
+                    <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section id="hero" class="hero">
             <div class="container">
-                 <div class="hero-pic">
-                    <img src="images/amit.jpg" alt="profile pic">
-                 </div>
-                 <div class="hero-text">
-                    <h5>Hi I'm <i class="fas fa-rocket icon-colored"></i><span class="input">Android Developer</span></h5>
-                    <h1>Amit Kumar</h1>
-                    <p> 
-                        Since 2022, I've been passionately and dedicatedly developing Android applications. My love for reading and writing tech articles keeps me constantly engaged with the latest in technology. Recently, I've also started learning physics, expanding my knowledge and interests further.    
-                    </p>
-
-                    <div class="btn-group">
-                       <a href="tel:+919694934927" target="_top" class="btn active">Hire Me</a>
-                       <a href="contact.html" class="btn">Contact</a>
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h1 class="hero-title">
+                            <span class="hero-greeting">Hi, I'm</span>
+                            <span class="hero-name">Amit Yadav</span>
+                        </h1>
+                        <p class="hero-subtitle">Android & IoT Developer</p>
+                        <p class="hero-tagline">I build clean Android apps and connected devices that solve real problems</p>
+                        <p class="hero-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Rajasthan, India</span>
+                        </p>
+                        
+                        <div class="hero-actions">
+                            <a href="#contact" class="btn btn--primary">Get In Touch</a>
+                            <a href="/resume.pdf" class="btn btn--outline" target="_blank" rel="noopener noreferrer">Download Resume</a>
+                        </div>
+                        
+                        <div class="hero-social">
+                            <a href="https://github.com/kalactor" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                            </a>
+                            <a href="https://linkedin.com/in/rootamit" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </a>
+                            <a href="https://twitter.com/amitacoder" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:amity1401@gmail.com" aria-label="Email">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </a>
+                        </div>
                     </div>
-
-                    <div class="social">
-                        <a href="https://linkedin.com/in/ayemyth" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="https://x.com/AmitACoder" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                        <a href="https://youtube.com/@jetpackcomposeworld"  target="_blank"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="#"><i class="fa-brands fa-instagram" target="_blank"></i></a>
-                        <a href="https://github.com/kalactor" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <div class="hero-media">
+                        <img src="images/amit.jpg" alt="Amit Yadav portrait" class="hero-portrait" width="320" height="400" loading="eager" decoding="async">
                     </div>
-                 </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="about-bio">
+                            Passionate Android developer and IoT enthusiast with expertise in building scalable mobile applications and embedded systems. Currently preparing for competitive examinations while working on innovative projects that bridge the gap between software and hardware.
+                        </p>
+                        
+                        <div class="skills-grid">
+                            <div class="skill-category">
+                                <h3 class="skill-category-title">Mobile</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Android</span>
+                                    <span class="skill-tag">Kotlin</span>
+                                    <span class="skill-tag">Jetpack Compose</span>
+                                    <span class="skill-tag">MVVM Architecture</span>
+                                    <span class="skill-tag">Room Database</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h3 class="skill-category-title">IoT/Embedded</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">ESP32</span>
+                                    <span class="skill-tag">Arduino</span>
+                                    <span class="skill-tag">C/C++</span>
+                                    <span class="skill-tag">Sensors</span>
+                                    <span class="skill-tag">PCB Design</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h3 class="skill-category-title">Web</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">JavaScript</span>
+                                    <span class="skill-tag">TypeScript</span>
+                                    <span class="skill-tag">Next.js</span>
+                                    <span class="skill-tag">React</span>
+                                    <span class="skill-tag">Tailwind CSS</span>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-category">
+                                <h3 class="skill-category-title">Systems</h3>
+                                <div class="skill-tags">
+                                    <span class="skill-tag">Linux (Arch)</span>
+                                    <span class="skill-tag">Python</span>
+                                    <span class="skill-tag">Git</span>
+                                    <span class="skill-tag">Docker</span>
+                                    <span class="skill-tag">System Administration</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                
+                <div class="project-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="android">Android</button>
+                    <button class="filter-btn" data-filter="iot">IoT</button>
+                    <button class="filter-btn" data-filter="web">Web</button>
+                    <button class="filter-btn" data-filter="tools">Tools</button>
+                </div>
+                
+                <div class="projects-grid" id="projects-grid">
+                    <article class="project-card" data-category="android">
+                        <div class="project-card-header">
+                            <h3 class="project-title">PDF Reader - Viewer</h3>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.rabarka.pdfreader" target="_blank" rel="noopener noreferrer" aria-label="View on Google Play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Clean, small PDF reader to view documents anytime, anywhere.</p>
+                        <ul class="project-highlights">
+                            <li>Clean, small PDF reader</li>
+                            <li>View documents anytime, anywhere</li>
+                            <li>Available on Google Play</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Google Play</span>
+                            <span class="tech-tag">Utility</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="android">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Shorty - URL Shortener</h3>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.rabarka.shorty_urlshortener" target="_blank" rel="noopener noreferrer" aria-label="View on Google Play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Simplify your links, track clicks, and share easily.</p>
+                        <ul class="project-highlights">
+                            <li>Shorten and manage links</li>
+                            <li>Click tracking included</li>
+                            <li>Share links with ease</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Google Play</span>
+                            <span class="tech-tag">Utility</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="android">
+                        <div class="project-card-header">
+                            <h3 class="project-title">WhatsApp Status Saver</h3>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.rabarka.statussaver" target="_blank" rel="noopener noreferrer" aria-label="View on Google Play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">View, save, and share WhatsApp statuses in one tap, no login, no ads.</p>
+                        <ul class="project-highlights">
+                            <li>View, save, and share WhatsApp statuses</li>
+                            <li>One-tap workflow</li>
+                            <li>No login, no ads</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Google Play</span>
+                            <span class="tech-tag">Utility</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="android">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Direct SMS</h3>
+                            <div class="project-links">
+                                <a href="https://play.google.com/store/apps/details?id=com.rabarka.directsms" target="_blank" rel="noopener noreferrer" aria-label="View on Google Play">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Start a chat quickly without adding the number to contacts application.</p>
+                        <ul class="project-highlights">
+                            <li>Start chats without saving contacts</li>
+                            <li>Quick access to new numbers</li>
+                            <li>Available on Google Play</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Android</span>
+                            <span class="tech-tag">Google Play</span>
+                            <span class="tech-tag">Utility</span>
+                        </div>
+                    </article>
+                    <article class="project-card" data-category="iot">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Smart Water Tank Monitor</h3>
+                            <div class="project-links">
+                                <a href="https://github.com/kalactor/water-tank-alarm" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Solar-powered water level monitoring system with ESP32 and ultrasonic sensors.</p>
+                        <ul class="project-highlights">
+                            <li>Deep sleep mode for extended battery life</li>
+                            <li>Solar charging with TP4056 module</li>
+                            <li>Waterproof sensor integration</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">Sensors</span>
+                            <span class="tech-tag">PCB Design</span>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-category="web">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Portfolio Website</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                                <a href="https://amityadav.in" target="_blank" rel="noopener noreferrer" aria-label="View live demo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Modern, responsive portfolio website built with Next.js and deployed on Oracle Cloud.</p>
+                        <ul class="project-highlights">
+                            <li>Dark/light mode with system preference detection</li>
+                            <li>Optimized for performance and accessibility</li>
+                            <li>Deployed on self-managed Ubuntu VM</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Next.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-category="tools">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Linux ISO Downloader</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Automated tool for downloading Linux ISOs with multiple mirror support and progress tracking.</p>
+                        <ul class="project-highlights">
+                            <li>Multiple mirror support for reliability</li>
+                            <li>Progress tracking and resume capability</li>
+                            <li>User-friendly command line interface</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">CLI</span>
+                            <span class="tech-tag">Multi-threading</span>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-category="tools">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Linux System Scripts</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Collection of automation scripts for Linux system administration and maintenance.</p>
+                        <ul class="project-highlights">
+                            <li>System monitoring and maintenance</li>
+                            <li>Automated backup solutions</li>
+                            <li>Package management utilities</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Bash</span>
+                            <span class="tech-tag">Linux</span>
+                            <span class="tech-tag">Systemd</span>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-category="iot">
+                        <div class="project-card-header">
+                            <h3 class="project-title">PCB Design Tutorial Series</h3>
+                            <div class="project-links">
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Comprehensive tutorial series for learning PCB design with KiCad from scratch.</p>
+                        <ul class="project-highlights">
+                            <li>Step-by-step KiCad tutorials</li>
+                            <li>Layer management and design rules</li>
+                            <li>Real-world project examples</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">KiCad</span>
+                            <span class="tech-tag">Electronics</span>
+                            <span class="tech-tag">Documentation</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="projects-actions">
+                    <button class="btn btn--secondary" id="projects-toggle" type="button">Load all projects</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Self-taught Developer & Technical Enthusiast</h3>
+                            <p class="timeline-period">2022 - Present</p>
+                            <p class="timeline-description">Developing Android applications with modern architecture patterns, building IoT solutions with ESP32, and creating educational content.</p>
+                            <ul class="timeline-highlights">
+                                <li>Built multiple Android apps using MVVM architecture and Jetpack Compose</li>
+                                <li>Designed and implemented ESP32-based water tank monitoring system</li>
+                                <li>Created PCB designs using KiCad for embedded projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 class="timeline-title">Competitive Exam Aspirant</h3>
+                            <p class="timeline-period">2023 - Present</p>
+                            <p class="timeline-description">Preparing for RPSC RAS and other government competitive examinations while maintaining active development work.</p>
+                            <ul class="timeline-highlights">
+                                <li>Studying comprehensive syllabus including ICT, current affairs, and technical subjects</li>
+                                <li>Creating study materials and documentation for exam preparation</li>
+                                <li>Balancing technical projects with academic preparation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section">
+            <div class="container">
+                <h2 class="section-title">Latest Writing</h2>
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <h3 class="blog-title">Building Android Apps with MVVM Architecture</h3>
+                        <p class="blog-excerpt">A comprehensive guide to implementing MVVM architecture in Android applications with practical examples.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">Sep 15, 2024</span>
+                            <span class="blog-read-time">8 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Android</span>
+                            <span class="blog-tag">MVVM</span>
+                            <span class="blog-tag">Architecture</span>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <h3 class="blog-title">ESP32 Deep Sleep Power Management</h3>
+                        <p class="blog-excerpt">Optimizing battery life in IoT projects using ESP32 deep sleep modes and power management techniques.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">Aug 20, 2024</span>
+                            <span class="blog-read-time">6 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">ESP32</span>
+                            <span class="blog-tag">IoT</span>
+                            <span class="blog-tag">Power Management</span>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-card">
+                        <h3 class="blog-title">PCB Design with KiCad: Beginner's Guide</h3>
+                        <p class="blog-excerpt">Learn the fundamentals of PCB design using KiCad, from schematic capture to board layout.</p>
+                        <div class="blog-meta">
+                            <span class="blog-date">Jul 10, 2024</span>
+                            <span class="blog-read-time">10 min read</span>
+                        </div>
+                        <div class="blog-tags">
+                            <span class="blog-tag">PCB</span>
+                            <span class="blog-tag">KiCad</span>
+                            <span class="blog-tag">Electronics</span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <p class="contact-description">
+                            I'm always interested in discussing new opportunities, collaborating on projects, or just having a conversation about technology. Feel free to reach out!
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <a href="mailto:amity1401@gmail.com" class="contact-method">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                                <span>amity1401@gmail.com</span>
+                            </a>
+                            
+                            <div class="contact-location">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                                <span>Rajasthan, India</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+                        
+                        <!-- Honeypot field for spam protection -->
+                        <input type="text" name="website" style="display: none;" tabindex="-1" autocomplete="off">
+                        
+                        <button type="submit" class="btn btn--primary btn--full-width" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading hidden">Sending...</span>
+                        </button>
+                        
+                        <div class="form-message" id="form-message" role="alert"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    &copy; 2026 Amit Yadav. Built with passion and attention to detail.
+                </p>
+                <div class="footer-links">
+                    <a href="https://github.com/kalactor" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://linkedin.com/in/rootamit" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="mailto:amity1401@gmail.com">Email</a>
+                </div>
             </div>
         </div>
-     </div>
-     <!---typed js for typing text effect-->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
-     <script>
-        /** creating button click show hide navbar **/
-        var togglebtn=document.querySelector(".togglebtn");
-        var nav=document.querySelector(".navlinks");
-        var links=document.querySelector(".navlinks li");
+    </footer>
 
-        togglebtn.addEventListener("click", function(){
-            this.classList.toggle("click");
-            nav.classList.toggle("open");
-        })
-
-        var typed=new Typed(".input",{
-            strings:["Android Developer","Civil Services Aspirant","Ex-Banker (SWO-A)"],
-            typedSpeed: 70,
-            backSpeed:55,
-            loop:true
-        })
-     </script>
+    <button class="scroll-top" id="scroll-top" type="button" aria-label="Scroll to top" title="Scroll to top">
+        <svg class="scroll-top__progress" viewBox="0 0 48 48" aria-hidden="true">
+            <circle class="scroll-top__track" cx="24" cy="24" r="20"></circle>
+            <circle class="scroll-top__indicator" cx="24" cy="24" r="20"></circle>
+        </svg>
+        <svg class="scroll-top__icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 19V5"/>
+            <polyline points="5 12 12 5 19 12"/>
+        </svg>
+    </button>
 </body>
 </html>
