@@ -340,8 +340,10 @@ class PortfolioApp {
     let visibleCount = 0;
     
     projectCards.forEach(card => {
-      const category = card.getAttribute('data-category');
-      const shouldShow = filter === 'all' || category === filter;
+      const categories = (card.getAttribute('data-category') || '')
+        .split(/\s+/)
+        .filter(Boolean);
+      const shouldShow = filter === 'all' || categories.includes(filter);
       
       if (shouldShow) {
         matchingCards.push(card);
@@ -349,8 +351,10 @@ class PortfolioApp {
     });
 
     projectCards.forEach(card => {
-      const category = card.getAttribute('data-category');
-      const shouldShow = filter === 'all' || category === filter;
+      const categories = (card.getAttribute('data-category') || '')
+        .split(/\s+/)
+        .filter(Boolean);
+      const shouldShow = filter === 'all' || categories.includes(filter);
       const withinLimit = shouldShow && visibleCount < maxVisible;
 
       if (withinLimit) {

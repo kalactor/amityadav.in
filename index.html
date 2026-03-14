@@ -132,7 +132,7 @@
                             <span class="hero-name">Amit Yadav</span>
                         </h1>
                         <p class="hero-subtitle">Android & IoT Developer</p>
-                        <p class="hero-tagline">I build clean Android apps and connected devices that solve real problems</p>
+                        <p class="hero-tagline">I build clean Android apps and connected devices that solve real world problems</p>
                         <p class="hero-location">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
@@ -247,12 +247,41 @@
                 <div class="project-filters">
                     <button class="filter-btn active" data-filter="all">All</button>
                     <button class="filter-btn" data-filter="android">Android</button>
+                    <button class="filter-btn" data-filter="windows">Windows</button>
+                    <button class="filter-btn" data-filter="linux">Linux</button>
                     <button class="filter-btn" data-filter="iot">IoT</button>
                     <button class="filter-btn" data-filter="web">Web</button>
                     <button class="filter-btn" data-filter="tools">Tools</button>
                 </div>
                 
                 <div class="projects-grid" id="projects-grid">
+                    <article class="project-card" data-category="tools windows">
+                        <div class="project-card-header">
+                            <h3 class="project-title">Print Guard</h3>
+                            <div class="project-links">
+                                <a href="https://printguard.in" target="_blank" rel="noopener noreferrer" aria-label="View live site">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+                                        <polyline points="15,3 21,3 21,9"/>
+                                        <line x1="10" y1="14" x2="21" y2="3"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <p class="project-description">Windows print authorization utility that pauses every new print job and releases it only after local password approval.</p>
+                        <ul class="project-highlights">
+                            <li>Intercepts and holds print jobs before anything reaches the printer</li>
+                            <li>Password-gated release and protected admin actions through a tray-first workflow</li>
+                            <li>Lite and Pro plans with timed unlock windows, per-printer protection, and local activity logs</li>
+                        </ul>
+                        <div class="project-tech">
+                            <span class="tech-tag">Windows</span>
+                            <span class="tech-tag">Desktop Utility</span>
+                            <span class="tech-tag">Security</span>
+                            <span class="tech-tag">Offline-first</span>
+                        </div>
+                    </article>
+
                     <article class="project-card" data-category="android">
                         <div class="project-card-header">
                             <h3 class="project-title">PDF Reader - Viewer</h3>
@@ -412,7 +441,7 @@
                         </div>
                     </article>
                     
-                    <article class="project-card" data-category="tools">
+                    <article class="project-card" data-category="tools linux">
                         <div class="project-card-header">
                             <h3 class="project-title">Linux ISO Downloader</h3>
                             <div class="project-links">
@@ -436,7 +465,7 @@
                         </div>
                     </article>
                     
-                    <article class="project-card" data-category="tools">
+                    <article class="project-card" data-category="tools linux">
                         <div class="project-card-header">
                             <h3 class="project-title">Linux System Scripts</h3>
                             <div class="project-links">
